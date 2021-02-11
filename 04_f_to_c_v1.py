@@ -2,8 +2,8 @@
 # Function takes in value, does conversion and puts answer into a list
 
 def to_c(from_f):
-    celcius = (from_f - 32) * 5/9
-    return celcius
+    celsius = (from_f - 32) * 5/9
+    return celsius
 
 # Main routine
 temperatures = [0, 40, 100]
