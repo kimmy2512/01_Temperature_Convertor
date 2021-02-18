@@ -30,7 +30,7 @@ else:
     if len(all_calculations) >= 3:
         print("*** Most Recent 3 ***")
         for item in range(0,3):
-            print(all_calculations(len(all_calculations) - item - 1))
+            print(all_calculations[len(all_calculations) - item - 1])
 
     else:
         print("*** Items from Newest to Oldest ***")
