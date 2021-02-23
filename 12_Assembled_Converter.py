@@ -10,11 +10,19 @@ class Converter:
         # Formatting variables...
         background_color = "light blue"
 
-        # Initialise list to hold calculation history
+        # In actual program this is blank and is populated with user calculation
+
+        '''self.all_calc_list = ['5 degrees C is -17.2 degrees F',
+                              '6 degrees C is -16.7 degrees F',
+                              '7 degrees C is -16.1 degrees F',
+                              '8 degrees C is -15.8 degrees F',
+                              '9 degrees C is -15.1 degrees F',
+                                ]'''
+
         self.all_calc_list = []
 
-        # Converter Frame
-        self.converter_frame = Frame(width=350, bg=background_color,
+        # Converter Main screen GUI...
+        self.converter_frame = Frame(width=350, height = 300, bg=background_color,
                                      pady=10)
         self.converter_frame.grid()
 
