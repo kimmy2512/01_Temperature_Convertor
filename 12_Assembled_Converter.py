@@ -1,5 +1,6 @@
 from tkinter import *
 from functools import partial    # To prevent unwanted windows
+import re
 
 import random
 
@@ -8,16 +9,7 @@ class Converter:
     def __init__(self):
 
         # Formatting variables...
-        background_color = "light blue"
-
-        # In actual program this is blank and is populated with user calculation
-
-        '''self.all_calc_list = ['5 degrees C is -17.2 degrees F',
-                              '6 degrees C is -16.7 degrees F',
-                              '7 degrees C is -16.1 degrees F',
-                              '8 degrees C is -15.8 degrees F',
-                              '9 degrees C is -15.1 degrees F',
-                                ]'''
+        background_color = "pale turquoise"
 
         self.all_calc_list = []
 
@@ -54,7 +46,7 @@ class Converter:
 
         self.to_c_button = Button(self.conversion_buttons_frame,
                                   text="To Centigrade", font="Arial 10 bold",
-                                  bg="Khaki1", padx=10, pady=10,
+                                  bg="spring green", padx=10, pady=10,
                                   command=lambda: self.temp_convert(-459))
         self.to_c_button.grid(row=0, column=0)
 
@@ -66,7 +58,7 @@ class Converter:
 
         # Answer label (row 4)
         self.converted_label = Label(self.converter_frame, font="Arial 14 bold",
-                                     fg="purple", bg=background_color,
+                                     fg="hot pink", bg=background_color,
                                      pady=10, text="Conversion goes here")
         self.converted_label.grid(row=4)
 
@@ -83,7 +75,7 @@ class Converter:
             self.calc_hist_button.config(state=DISABLED)
 
         self.help_button = Button(self.hist_help_frame, font="Arial 12 bold",
-                                  text="Help", width=5)
+                                  text="Help", width=5, command=self.help)
         self.help_button.grid(row=0, column=1)
 
     def temp_convert(self, low):
@@ -145,11 +137,22 @@ class Converter:
     def history(self, calc_history):
         History(self, calc_history)
 
+    def help(self):
+        get_help = Help(self)
+        get_help.help.text.configure(text="Please enter a number in the box"
+                                     "and then push one of the buttons "
+                                     " to convert the number to either "
+                                     "degrees C or degrees F.\n\n"
+                                     "The Calculation History area shows "
+                                     "up to seven past calculations "
+                                     "(most recent at the top).  \n\nYou can "
+                                     "also export your full calculation "
+                                     "history to a text file if desired.")
 
 class History:
     def __init__(self, partner, calc_history):
 
-        background = "#a9ef99"      # Pale green
+        background = "#a9ef99"  # Pale green
 
         # disable history button
         partner.history_button.config(state=DISABLED)
@@ -172,10 +175,10 @@ class History:
         # History text (label, row 1)
         self.history_text = Label(self.history_frame,
                                   text="Here are your most recent "
-                                        "calculations. Please use the "
-                                        "export button to create a text "
-                                        "file of all your calculations for "
-                                        "this session", wrap=250,
+                                       "calculations. Please use the "
+                                       "export button to create a text "
+                                       "file of all your calculations for "
+                                       "this session", wrap=250,
                                   font="arial 10 italic",
                                   justify=LEFT, width=40, bg=background, fg="maroon",
                                   padx=10, pady=10)
@@ -189,7 +192,7 @@ class History:
         if len(calc_history) >= 7:
             for item in range(0, 7):
                 history_string += calc_history[len(calc_history)
-                                                - item - 1]+"\n"
+                                               - item - 1] + "\n"
         else:
             for item in calc_history:
                 history_string += calc_history[len(calc_history) -
@@ -202,7 +205,7 @@ class History:
 
         # Label to display calculation history to user
         self.calc_label = Label(self.history_frame, text=history_string,
-                                bg=background,font="Arial 12", justify=LEFT)
+                                bg=background, font="Arial 12", justify=LEFT)
         self.calc_label.grid(row=2)
 
         # Export / Dismiss Button Frame (row 3)
@@ -216,14 +219,9 @@ class History:
 
         # Dismiss button
         self.dismiss_button = Button(self.export_dismiss_frame, text="Dismiss",
-                                  font="Arial 12 bold",
+                                     font="Arial 12 bold",
                                      command=partial(self.close_history, partner))
         self.dismiss_button.grid(row=0, column=1)
-
-    def close_history(self, partner):
-        # Put history button back to normal..
-        partner.history_button.config(state=NORMAL)
-        self.history_box.destroy()
 
 # Main routine
 if __name__ == "__main__":
