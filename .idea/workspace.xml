@@ -23,11 +23,31 @@
       <file leaf-file-name="12_Assembled_Converter.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/12_Assembled_Converter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="169" column="40" selection-start-line="169" selection-start-column="40" selection-end-line="169" selection-end-column="40" />
+            <state relative-caret-position="637">
+              <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="01_Help_GUI" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01_Help_GUI">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="01_Help_GUI_v2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01_Help_GUI_v2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="70" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -47,8 +67,8 @@
       <file leaf-file-name="10_History_GUI_v1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/10_History_GUI_v1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="112" column="49" selection-start-line="40" selection-start-column="0" selection-end-line="112" selection-end-column="49" />
+            <state relative-caret-position="416">
+              <caret line="91" column="39" selection-start-line="40" selection-start-column="0" selection-end-line="112" selection-end-column="49" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -476,18 +496,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/10_History_GUI_v1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="112" column="49" selection-start-line="40" selection-start-column="0" selection-end-line="112" selection-end-column="49" />
+        <state relative-caret-position="416">
+          <caret line="91" column="39" selection-start-line="40" selection-start-column="0" selection-end-line="112" selection-end-column="49" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01_Help_GUI">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01_Help_GUI_v2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="70" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/12_Assembled_Converter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="169" column="40" selection-start-line="169" selection-start-column="40" selection-end-line="169" selection-end-column="40" />
+        <state relative-caret-position="637">
+          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
